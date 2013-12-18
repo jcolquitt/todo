@@ -2,6 +2,8 @@
 import sys
 import os
 
+
+
 class TodoCommandParser(object):
 	def __init__(self, commandLineArgs):
 		# split the arguments by space and skip the first (command name)
@@ -116,9 +118,9 @@ class TodoRouter(object):
 
 if __name__ == '__main__':
 	CommandString = ' '.join(sys.argv)
-	FileTodo = FileTodoList(path='TODO')
-	Router = TodoRouter(FileTodo)
-	result = Router.process(CommandString)
+      	FileTodo = FileTodoList(path = os.path.expanduser('~/.TODO'))
+      	Router = TodoRouter(FileTodo)
+      	result = Router.process(CommandString)
 	if result != None:
 		print result
 	FileTodo.write()
