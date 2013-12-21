@@ -1,13 +1,12 @@
 #!/usr/bin/python
 import sys
 import os
-import pdb
+
 
 
 class TodoCommandParser(object):
     def __init__(self, commandLineArgs):
-        # split the arguments by space and skip the first (command name)
-        #pdb.set_trace()        
+        # split the arguments by space and skip the first (command name)      
         A = commandLineArgs.split()
         A = A[1:]
         if A[-1] == '--home':
