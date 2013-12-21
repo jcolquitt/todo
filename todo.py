@@ -9,7 +9,7 @@ class TodoCommandParser(object):
         # split the arguments by space and skip the first (command name)      
         A = commandLineArgs.split()
         A = A[1:]
-        if A[-1] == '--home':
+        if A[-1] == '--home': #last argument isn't needed now
             A = A[:-1]
         self.command = ''
         self.arg1 = ''
