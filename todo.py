@@ -2,8 +2,6 @@
 import sys
 import os
 
-
-
 class TodoCommandParser(object):
     def __init__(self, commandLineArgs):
         # split the arguments by space and skip the first (command name)      
